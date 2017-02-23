@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Constructor - главная</title>
+    <link rel="stylesheet" href="https://unpkg.com/huebee@1/dist/huebee.min.css">
+    <link rel="stylesheet" href="css/custom-styles.css">
+</head>
+<body>
+
+<div class="wrapper">
+
+    <ul class="nav">
+        <li title="Посмотреть результат"></li>
+        <li title="Добавить элемент"></li>
+        <li title="Редактировать текст"></li>
+        <li title="Править стили"></li>
+        <li title="Выбрать сетку"></li>
+        <li title="Изменить фон и ширину"></li>
+        <li title="Общая информация о сайте"></li>
+        <li title="Сохранить шаблон"></li>
+    </ul>
+
+    <form action="#" class="width-and-colors">
+
+        <fieldset>
+
+            <label for="site-width">ширина сайта</label>
+            <input type="text" id="site-width" placeholder="1240">
+
+        </fieldset>
+
+        <fieldset>
+
+            <label for="site-top-padding">отступ сверху</label>
+            <input type="text" id="site-top-padding" placeholder="15">
+
+        </fieldset>
+
+        <fieldset>
+
+            <label for="document-background">экран</label>
+            <input type="text" id="document-background" class="color-input" value="#ffffff">
+
+        </fieldset>
+
+        <fieldset>
+
+            <label for="document-background-image">фоновая картинка</label>
+            <input type="file" id="document-background-image">
+
+        </fieldset>
+
+        <fieldset>
+
+            <label for="site-background">сайт</label>
+            <input type="text" id="site-background" class="color-input" value="#cccccc">
+
+        </fieldset>
+
+        <fieldset>
+
+            <label for="header-background">хедер</label>
+            <input type="text" id="header-background" class="color-input" value="#74bdb0">
+
+        </fieldset>
+
+        <fieldset>
+
+            <label for="header-top-background">хедер топ</label>
+            <input type="text" id="header-top-background" class="color-input" value="#cccccc">
+
+        </fieldset>
+
+        <fieldset>
+
+            <label for="header-bottom-background">хедер bottom</label>
+            <input type="text" id="header-bottom-background" class="color-input" value="#ffffff">
+
+        </fieldset>
+
+        <fieldset>
+
+            <label for="sidebar-left-background">сайтбар left</label>
+            <input type="text" id="sidebar-left-background" class="color-input" value="#cccccc">
+
+        </fieldset>
+
+        <fieldset>
+
+            <label for="sidebar-right-background">сайтбар right</label>
+            <input type="text" id="sidebar-right-background" class="color-input" value="#ffffff">
+
+        </fieldset>
+
+        <fieldset>
+
+            <label for="footer-background">футер</label>
+            <input type="text" id="footer-background" class="color-input" value="#cccccc">
+
+        </fieldset>
+
+        <fieldset>
+
+            <label for="footer-top-background">футер топ</label>
+            <input type="text" id="footer-top-background" class="color-input" value="#1d6887">
+
+        </fieldset>
+
+        <fieldset>
+
+            <label for="footer-bottom-background">футер bottom</label>
+            <input type="text" id="footer-bottom-background" class="color-input" value="#cccccc">
+
+        </fieldset>
+
+        <button type="submit">Применить изменения</button>
+
+    </form>
+
+    <form action="#" class="general-settings">
+
+        <fieldset>
+
+            <label for="site-name">название</label>
+            <input type="text" id="site-name" placeholder="магазин косметики">
+
+        </fieldset>
+
+        <fieldset>
+
+            <label for="site-domain">домен</label>
+            <input type="text" id="site-domain" placeholder="magazin-kosmetiki.com">
+
+        </fieldset>
+
+        <fieldset>
+
+            <label for="company-name">название компании</label>
+            <input type="text" id="company-name" placeholder="Л’Этуаль">
+
+        </fieldset>
+
+        <fieldset>
+
+            <label for="company-address">адрес</label>
+            <input type="text" id="company-address" placeholder="Московский проспект, д. 177, корп. 3">
+
+        </fieldset>
+
+        <fieldset>
+
+            <label for="company-address-city">город</label>
+            <input type="text" id="company-address-city" placeholder="Москва">
+
+        </fieldset>
+
+        <fieldset>
+
+            <label for="company-address-street">улица</label>
+            <input type="text" id="company-address-street" placeholder="Московский проспект">
+
+        </fieldset>
+
+        <fieldset>
+
+            <label for="company-address-house">дом</label>
+            <input type="text" id="company-address-house" placeholder="177">
+
+        </fieldset>
+
+        <fieldset>
+
+            <label for="company-phone-1">телефон I</label>
+            <input type="text" id="company-phone-1" placeholder="(495) 730-57-78">
+
+        </fieldset>
+
+        <fieldset>
+
+            <label for="company-phone-2">телефон II</label>
+            <input type="text" id="company-phone-2" placeholder="(495) 730-57-78">
+
+        </fieldset>
+
+        <fieldset>
+
+            <label for="company-phone-3">телефон III</label>
+            <input type="text" id="company-phone-3" placeholder="(495) 730-57-78">
+
+        </fieldset>
+
+        <fieldset>
+
+            <label for="company-phone">email</label>
+            <input type="text" id="company-email" placeholder="mail@mail.com">
+
+        </fieldset>
+
+        <fieldset>
+
+            <label for="company-hours">время работы</label>
+            <input type="text" id="company-hours" placeholder="с 9:00 - 18:00">
+
+        </fieldset>
+
+        <fieldset>
+
+            <label for="company-logo">логотип</label>
+            <input type="text" id="company-logo" placeholder="">
+
+        </fieldset>
+
+        <fieldset>
+
+            <label for="company-water-mark-1">водяной знак</label>
+            <input type="text" id="company-water-mark-1" placeholder="">
+
+        </fieldset>
+
+        <fieldset>
+
+            <label for="company-water-mark-2">водяной знак</label>
+            <input type="text" id="company-water-mark-2" placeholder="водяной знак">
+
+        </fieldset>
+
+    </form>
+
+
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"></script>
+<script src="https://unpkg.com/huebee@1/dist/huebee.pkgd.min.js"></script>
+<script src="js/custom-scripts.js"></script>
+</body>
+</html>
