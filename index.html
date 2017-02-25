@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Constructor - главная</title>
     <link rel="stylesheet" href="https://unpkg.com/huebee@1/dist/huebee.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
     <link rel="stylesheet" href="css/custom-styles.css">
 </head>
 <body>
@@ -11,14 +12,14 @@
 <div class="wrapper">
 
     <ul class="nav">
-        <li title="Посмотреть результат"></li>
-        <li title="Добавить элемент"></li>
-        <li title="Редактировать текст"></li>
-        <li title="Править стили"></li>
-        <li title="Выбрать сетку"></li>
-        <li title="Изменить фон и ширину"></li>
-        <li title="Общая информация о сайте"></li>
-        <li title="Сохранить шаблон"></li>
+        <li data-balloon="Посмотреть результат" data-balloon-pos="right" class="btn-show-result"></li>
+        <li data-balloon="Добавить элемент" data-balloon-pos="right" class="btn-add-element"></li>
+        <li data-balloon="Редактировать текст" data-balloon-pos="right" class="btn-edit-text"></li>
+        <li data-balloon="Править стили" data-balloon-pos="right" class="btn-edit-styles"></li>
+        <li data-balloon="Выбрать сетку" data-balloon-pos="right" class="btn-choose-grid"></li>
+        <li data-balloon="Изменить фон и ширину" data-balloon-pos="right" class="btn-edit-background-width"></li>
+        <li data-balloon="Общая информация о сайте" data-balloon-pos="right" class="btn-edit-info"></li>
+        <li data-balloon="Сохранить шаблон" data-balloon-pos="right" class="btn-save-template"></li>
     </ul>
 
     <form action="#" class="width-and-colors">
@@ -46,7 +47,7 @@
 
         <fieldset>
 
-            <label for="document-background-image">фоновая картинка</label>
+            <label for="document-background-image" class="upload-label">фоновая картинка</label>
             <input type="file" id="document-background-image">
 
         </fieldset>
@@ -233,6 +234,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
 <script src="https://unpkg.com/huebee@1/dist/huebee.pkgd.min.js"></script>
 <script src="js/custom-scripts.js"></script>
 </body>
