@@ -12,6 +12,8 @@ $(document).ready(function() {
         $('.nav').css('left', '5px');
     }, 1000);
 
+    $('.wrapper').mCustomScrollbar();
+
     $('.width-and-colors').mCustomScrollbar();
 
     $('.general-settings').mCustomScrollbar();

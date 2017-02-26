@@ -497,7 +497,6 @@ button[data-balloon] {
     line-height: 24px;
 }
 
-
 /***********************************************************************************************************************
 ************* general-settings
 ***********************************************************************************************************************/
@@ -628,8 +627,75 @@ button[data-balloon] {
 }
 
 /***********************************************************************************************************************
-************* nav
+************* elements
 ***********************************************************************************************************************/
+
+.elements {
+    display: block;
+    position: fixed;
+    left: 62px;
+    top: 255px;
+}
+
+.elements-control {
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+    min-width: 85px;
+    padding: 4px 5px;
+    counter-reset: list;
+    background-color: #443f3d;
+}
+
+.elements-control li {
+    display: block;
+    width: 18px;
+    height: 18px;
+    position: relative;
+}
+
+.elements-control li:before {
+    content: counter(list);
+    counter-increment: list;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 1px solid #fff;
+    line-height: 16px;
+    text-align: center;
+    color: #fff;
+    background: #443f3d;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.elements-control li.active:before,
+.elements-control li:hover:before {
+    color: #443f3d;
+    background: #fff;
+}
+
+.elements-item {
+    display: none;
+    text-align: center;
+}
+
+.elements-item.active {
+    display: block;
+}
+
+.elements-item .item {
+    padding: 8px 0 3px;
+    border-bottom: 2px solid #443f3d;
+}
+
+.elements-item .item:hover,
+.elements-item .item.active {
+    background: #fef5f5;
+}
 
 /***********************************************************************************************************************
 ************* nav
