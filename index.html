@@ -5,394 +5,692 @@
     <title>Constructor - главная</title>
     <link rel="stylesheet" href="https://unpkg.com/huebee@1/dist/huebee.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css">
     <link rel="stylesheet" href="css/custom-styles.css">
 </head>
 <body>
 
 <div class="wrapper">
 
-    <ul class="nav">
-        <li data-balloon="Посмотреть результат" data-balloon-pos="right" class="btn-show-result"></li>
-        <li data-balloon="Добавить элемент" data-balloon-pos="right" class="btn-add-element"></li>
-        <li data-balloon="Редактировать текст" data-balloon-pos="right" class="btn-edit-text"></li>
-        <li data-balloon="Править стили" data-balloon-pos="right" class="btn-edit-styles"></li>
-        <li data-balloon="Выбрать сетку" data-balloon-pos="right" class="btn-choose-grid"></li>
-        <li data-balloon="Изменить фон и ширину" data-balloon-pos="right" class="btn-edit-background-width"></li>
-        <li data-balloon="Общая информация о сайте" data-balloon-pos="right" class="btn-edit-info"></li>
-        <li data-balloon="Сохранить шаблон" data-balloon-pos="right" class="btn-save-template"></li>
-    </ul>
-
-    <form action="#" class="width-and-colors">
-
-        <fieldset>
-
-            <label for="site-width">ширина сайта</label>
-            <input type="text" id="site-width" placeholder="1240">
-
-        </fieldset>
-
-        <fieldset>
-
-            <label for="site-top-padding">отступ сверху</label>
-            <input type="text" id="site-top-padding" placeholder="15">
-
-        </fieldset>
-
-        <fieldset>
-
-            <label for="document-background">экран</label>
-            <input type="text" id="document-background" class="color-input" value="#ffffff">
-
-        </fieldset>
-
-        <fieldset>
-
-            <label for="document-background-image" class="upload-label">фоновая картинка</label>
-            <input type="file" id="document-background-image">
-
-        </fieldset>
-
-        <fieldset>
-
-            <label for="site-background">сайт</label>
-            <input type="text" id="site-background" class="color-input" value="#cccccc">
-
-        </fieldset>
-
-        <fieldset>
-
-            <label for="header-background">хедер</label>
-            <input type="text" id="header-background" class="color-input" value="#74bdb0">
-
-        </fieldset>
-
-        <fieldset>
-
-            <label for="header-top-background">хедер топ</label>
-            <input type="text" id="header-top-background" class="color-input" value="#cccccc">
-
-        </fieldset>
-
-        <fieldset>
-
-            <label for="header-bottom-background">хедер bottom</label>
-            <input type="text" id="header-bottom-background" class="color-input" value="#ffffff">
-
-        </fieldset>
-
-        <fieldset>
-
-            <label for="sidebar-left-background">сайтбар left</label>
-            <input type="text" id="sidebar-left-background" class="color-input" value="#cccccc">
-
-        </fieldset>
-
-        <fieldset>
-
-            <label for="sidebar-right-background">сайтбар right</label>
-            <input type="text" id="sidebar-right-background" class="color-input" value="#ffffff">
-
-        </fieldset>
-
-        <fieldset>
-
-            <label for="footer-background">футер</label>
-            <input type="text" id="footer-background" class="color-input" value="#cccccc">
-
-        </fieldset>
-
-        <fieldset>
-
-            <label for="footer-top-background">футер топ</label>
-            <input type="text" id="footer-top-background" class="color-input" value="#1d6887">
-
-        </fieldset>
-
-        <fieldset>
-
-            <label for="footer-bottom-background">футер bottom</label>
-            <input type="text" id="footer-bottom-background" class="color-input" value="#cccccc">
-
-        </fieldset>
-
-        <button type="submit">Применить изменения</button>
-
-    </form>
-
-    <form action="#" class="general-settings">
-
-        <fieldset>
-
-            <label for="site-name">название</label>
-            <input type="text" id="site-name" placeholder="магазин косметики">
-
-        </fieldset>
-
-        <fieldset>
-
-            <label for="site-domain">домен</label>
-            <input type="text" id="site-domain" placeholder="magazin-kosmetiki.com">
-
-        </fieldset>
-
-        <fieldset>
-
-            <label for="company-name">название компании</label>
-            <input type="text" id="company-name" placeholder="Л’Этуаль">
-
-        </fieldset>
-
-        <fieldset>
-
-            <label for="company-address">адрес</label>
-            <input type="text" id="company-address" placeholder="Московский проспект, д. 177, корп. 3">
-
-        </fieldset>
-
-        <fieldset>
-
-            <label for="company-address-city">город</label>
-            <input type="text" id="company-address-city" placeholder="Москва">
-
-        </fieldset>
-
-        <fieldset>
-
-            <label for="company-address-street">улица</label>
-            <input type="text" id="company-address-street" placeholder="Московский проспект">
-
-        </fieldset>
-
-        <fieldset>
-
-            <label for="company-address-house">дом</label>
-            <input type="text" id="company-address-house" placeholder="177">
-
-        </fieldset>
-
-        <fieldset>
-
-            <label for="company-phone-1">телефон I</label>
-            <input type="text" id="company-phone-1" placeholder="(495) 730-57-78">
-
-        </fieldset>
-
-        <fieldset>
-
-            <label for="company-phone-2">телефон II</label>
-            <input type="text" id="company-phone-2" placeholder="(495) 730-57-78">
-
-        </fieldset>
-
-        <fieldset>
-
-            <label for="company-phone-3">телефон III</label>
-            <input type="text" id="company-phone-3" placeholder="(495) 730-57-78">
-
-        </fieldset>
-
-        <fieldset>
-
-            <label for="company-email">email</label>
-            <input type="text" id="company-email" placeholder="mail@mail.com">
-
-        </fieldset>
-
-        <fieldset>
-
-            <label for="company-hours">время работы</label>
-            <input type="text" id="company-hours" placeholder="с 9:00 - 18:00">
-
-        </fieldset>
-
-        <fieldset>
-
-            <label for="company-logo" class="upload-label">логотип</label>
-            <input type="file" id="company-logo">
-
-        </fieldset>
-
-        <fieldset>
-
-            <label for="company-water-mark-1" class="upload-label">водяной знак</label>
-            <input type="file" id="company-water-mark-1">
-
-        </fieldset>
-
-        <fieldset>
-
-            <label for="company-water-mark-2">водяной знак</label>
-            <input type="text" id="company-water-mark-2" placeholder="водяной знак">
-
-        </fieldset>
-
-        <button type="submit">Применить изменения</button>
-
-    </form>
-
-    <div class="elements">
-
-        <ul class="elements-control">
-            <li class="active"></li>
-            <li></li>
-            <li></li>
+    <div class="control-panel">
+
+        <ul class="nav">
+            <li data-balloon="Посмотреть результат" data-balloon-pos="right" class="btn-show-result"></li>
+            <li data-balloon="Добавить элемент" data-balloon-pos="right" class="btn-add-element"></li>
+            <li data-balloon="Редактировать текст" data-balloon-pos="right" class="btn-edit-text"></li>
+            <li data-balloon="Править стили" data-balloon-pos="right" class="btn-edit-styles"></li>
+            <li data-balloon="Выбрать сетку" data-balloon-pos="right" class="btn-choose-grid"></li>
+            <li data-balloon="Изменить фон и ширину" data-balloon-pos="right" class="btn-edit-background-width"></li>
+            <li data-balloon="Общая информация о сайте" data-balloon-pos="right" class="btn-edit-info"></li>
+            <li data-balloon="Сохранить шаблон" data-balloon-pos="right" class="btn-save-template"></li>
         </ul>
 
-        <div class="elements-item active">
+        <form action="#" class="width-and-colors nav-tab">
 
-            <div class="item">
-                <div class="icon"><img src="images/icon-element-logo.png" alt="icon-element"></div>
-                <span>логотип</span>
+            <fieldset>
+
+                <label for="site-width">ширина сайта</label>
+                <input type="text" id="site-width" placeholder="1240">
+
+            </fieldset>
+
+            <fieldset>
+
+                <label for="site-top-padding">отступ сверху</label>
+                <input type="text" id="site-top-padding" placeholder="15">
+
+            </fieldset>
+
+            <fieldset>
+
+                <label for="document-background">экран</label>
+                <input type="text" id="document-background" class="color-input" value="#ffffff">
+
+            </fieldset>
+
+            <fieldset>
+
+                <label for="document-background-image" class="upload-label">фоновая картинка</label>
+                <input type="file" id="document-background-image">
+
+            </fieldset>
+
+            <fieldset>
+
+                <label for="site-background">сайт</label>
+                <input type="text" id="site-background" class="color-input" value="#cccccc">
+
+            </fieldset>
+
+            <fieldset>
+
+                <label for="header-background">хедер</label>
+                <input type="text" id="header-background" class="color-input" value="#74bdb0">
+
+            </fieldset>
+
+            <fieldset>
+
+                <label for="header-top-background">хедер топ</label>
+                <input type="text" id="header-top-background" class="color-input" value="#cccccc">
+
+            </fieldset>
+
+            <fieldset>
+
+                <label for="header-bottom-background">хедер bottom</label>
+                <input type="text" id="header-bottom-background" class="color-input" value="#ffffff">
+
+            </fieldset>
+
+            <fieldset>
+
+                <label for="sidebar-left-background">сайтбар left</label>
+                <input type="text" id="sidebar-left-background" class="color-input" value="#cccccc">
+
+            </fieldset>
+
+            <fieldset>
+
+                <label for="sidebar-right-background">сайтбар right</label>
+                <input type="text" id="sidebar-right-background" class="color-input" value="#ffffff">
+
+            </fieldset>
+
+            <fieldset>
+
+                <label for="footer-background">футер</label>
+                <input type="text" id="footer-background" class="color-input" value="#cccccc">
+
+            </fieldset>
+
+            <fieldset>
+
+                <label for="footer-top-background">футер топ</label>
+                <input type="text" id="footer-top-background" class="color-input" value="#1d6887">
+
+            </fieldset>
+
+            <fieldset>
+
+                <label for="footer-bottom-background">футер bottom</label>
+                <input type="text" id="footer-bottom-background" class="color-input" value="#cccccc">
+
+            </fieldset>
+
+            <button type="submit">Применить изменения</button>
+
+        </form>
+
+        <form action="#" class="general-settings nav-tab">
+
+            <fieldset>
+
+                <label for="site-name">название</label>
+                <input type="text" id="site-name" placeholder="магазин косметики">
+
+            </fieldset>
+
+            <fieldset>
+
+                <label for="site-domain">домен</label>
+                <input type="text" id="site-domain" placeholder="magazin-kosmetiki.com">
+
+            </fieldset>
+
+            <fieldset>
+
+                <label for="company-name">название компании</label>
+                <input type="text" id="company-name" placeholder="Л’Этуаль">
+
+            </fieldset>
+
+            <fieldset>
+
+                <label for="company-address">адрес</label>
+                <input type="text" id="company-address" placeholder="Московский проспект, д. 177, корп. 3">
+
+            </fieldset>
+
+            <fieldset>
+
+                <label for="company-address-city">город</label>
+                <input type="text" id="company-address-city" placeholder="Москва">
+
+            </fieldset>
+
+            <fieldset>
+
+                <label for="company-address-street">улица</label>
+                <input type="text" id="company-address-street" placeholder="Московский проспект">
+
+            </fieldset>
+
+            <fieldset>
+
+                <label for="company-address-house">дом</label>
+                <input type="text" id="company-address-house" placeholder="177">
+
+            </fieldset>
+
+            <fieldset>
+
+                <label for="company-phone-1">телефон I</label>
+                <input type="text" id="company-phone-1" placeholder="(495) 730-57-78">
+
+            </fieldset>
+
+            <fieldset>
+
+                <label for="company-phone-2">телефон II</label>
+                <input type="text" id="company-phone-2" placeholder="(495) 730-57-78">
+
+            </fieldset>
+
+            <fieldset>
+
+                <label for="company-phone-3">телефон III</label>
+                <input type="text" id="company-phone-3" placeholder="(495) 730-57-78">
+
+            </fieldset>
+
+            <fieldset>
+
+                <label for="company-email">email</label>
+                <input type="text" id="company-email" placeholder="mail@mail.com">
+
+            </fieldset>
+
+            <fieldset>
+
+                <label for="company-hours">время работы</label>
+                <input type="text" id="company-hours" placeholder="с 9:00 - 18:00">
+
+            </fieldset>
+
+            <fieldset>
+
+                <label for="company-logo" class="upload-label">логотип</label>
+                <input type="file" id="company-logo">
+
+            </fieldset>
+
+            <fieldset>
+
+                <label for="company-water-mark-1" class="upload-label">водяной знак</label>
+                <input type="file" id="company-water-mark-1">
+
+            </fieldset>
+
+            <fieldset>
+
+                <label for="company-water-mark-2">водяной знак</label>
+                <input type="text" id="company-water-mark-2" placeholder="водяной знак">
+
+            </fieldset>
+
+            <button type="submit">Применить изменения</button>
+
+        </form>
+
+        <div class="elements left-tab">
+
+            <ul class="elements-control">
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+            </ul>
+
+            <div class="elements-item active">
+
+                <div class="item item-logo">
+                    <div class="icon"><img src="images/icon-element-logo.png" alt="icon-element"></div>
+                    <span>логотип</span>
+                </div>
+
+                <div class="item">
+                    <div class="icon"><img src="images/icon-element-menu.png" alt="icon-element"></div>
+                    <span>меню</span>
+                </div>
+
+                <div class="item">
+                    <div class="icon"><img src="images/icon-element-contacts.png" alt="icon-element"></div>
+                    <span>контакты</span>
+                </div>
+
+                <div class="item">
+                    <div class="icon"><img src="images/icon-element-location.png" alt="icon-element"></div>
+                    <span>локация</span>
+                </div>
+
+                <div class="item">
+                    <div class="icon"><img src="images/icon-element-search.png" alt="icon-element"></div>
+                    <span>поиск</span>
+                </div>
+
+                <div class="item">
+                    <div class="icon"><img src="images/icon-element-text.png" alt="icon-element"></div>
+                    <span>тексты</span>
+                </div>
+
+                <div class="item">
+                    <div class="icon"><img src="images/icon-element-banner.png" alt="icon-element"></div>
+                    <span>баннер</span>
+                </div>
+
+                <div class="item">
+                    <div class="icon"><img src="images/icon-element-icon.png" alt="icon-element"></div>
+                    <span>иконки</span>
+                </div>
+
+                <div class="item">
+                    <div class="icon"><img src="images/icon-element-h1.png" alt="icon-element"></div>
+                    <span>заголовки</span>
+                </div>
+
+                <div class="item">
+                    <div class="icon"><img src="images/icon-element-text.png" alt="icon-element"></div>
+                    <span>тексты</span>
+                </div>
+
             </div>
 
-            <div class="item">
-                <div class="icon"><img src="images/icon-element-menu.png" alt="icon-element"></div>
-                <span>меню</span>
+            <div class="elements-item">
+
+                <div class="item">
+                    <div class="icon"><img src="images/icon-element-image.png" alt="icon-element"></div>
+                    <span>картинки</span>
+                </div>
+
+                <div class="item">
+                    <div class="icon"><img src="images/icon-element-showcase.png" alt="icon-element"></div>
+                    <span>витрина</span>
+                </div>
+
+                <div class="item">
+                    <div class="icon"><img src="images/icon-element-icon.png" alt="icon-element"></div>
+                    <span>иконки</span>
+                </div>
+
+                <div class="item">
+                    <div class="icon"><img src="images/icon-element-table.png" alt="icon-element"></div>
+                    <span>таблицы</span>
+                </div>
+
+                <div class="item">
+                    <div class="icon"><img src="images/icon-element-banner.png" alt="icon-element"></div>
+                    <span>баннеры</span>
+                </div>
+
+                <div class="item">
+                    <div class="icon"><img src="images/icon-element-nav.png" alt="icon-element"></div>
+                    <span>навигация</span>
+                </div>
+
+                <div class="item">
+                    <div class="icon"><img src="images/icon-element-sort.png" alt="icon-element"></div>
+                    <span>сортировка</span>
+                </div>
+
+                <div class="item">
+                    <div class="icon"><img src="images/icon-element-slider.png" alt="icon-element"></div>
+                    <span>слайдер</span>
+                </div>
+
+                <div class="item">
+                    <div class="icon"><img src="images/icon-element-carousel.png" alt="icon-element"></div>
+                    <span>карусель</span>
+                </div>
+
+                <div class="item">
+                    <div class="icon"><img src="images/icon-element-accordion.png" alt="icon-element"></div>
+                    <span>аккордеон</span>
+                </div>
+
             </div>
 
-            <div class="item">
-                <div class="icon"><img src="images/icon-element-contacts.png" alt="icon-element"></div>
-                <span>контакты</span>
-            </div>
+            <div class="elements-item">
 
-            <div class="item">
-                <div class="icon"><img src="images/icon-element-location.png" alt="icon-element"></div>
-                <span>локация</span>
-            </div>
+                <div class="item">
+                    <div class="icon"><img src="images/icon-element-tabs.png" alt="icon-element"></div>
+                    <span>табы</span>
+                </div>
 
-            <div class="item">
-                <div class="icon"><img src="images/icon-element-search.png" alt="icon-element"></div>
-                <span>поиск</span>
-            </div>
+                <div class="item">
+                    <div class="icon"><img src="images/icon-element-timer.png" alt="icon-element"></div>
+                    <span>таймер</span>
+                </div>
 
-            <div class="item">
-                <div class="icon"><img src="images/icon-element-text.png" alt="icon-element"></div>
-                <span>тексты</span>
-            </div>
+                <div class="item">
+                    <div class="icon"><img src="images/icon-element-gallery.png" alt="icon-element"></div>
+                    <span>галерея</span>
+                </div>
 
-            <div class="item">
-                <div class="icon"><img src="images/icon-element-banner.png" alt="icon-element"></div>
-                <span>баннер</span>
-            </div>
+                <div class="item">
+                    <div class="icon"><img src="images/icon-element-form.png" alt="icon-element"></div>
+                    <span>формы</span>
+                </div>
 
-            <div class="item">
-                <div class="icon"><img src="images/icon-element-icon.png" alt="icon-element"></div>
-                <span>иконки</span>
-            </div>
+                <div class="item">
+                    <div class="icon"><img src="images/icon-element-review.png" alt="icon-element"></div>
+                    <span>отзывы</span>
+                </div>
 
-            <div class="item">
-                <div class="icon"><img src="images/icon-element-h1.png" alt="icon-element"></div>
-                <span>заголовки</span>
-            </div>
+                <div class="item">
+                    <div class="icon"><img src="images/icon-element-modal.png" alt="icon-element"></div>
+                    <span>модальные окна</span>
+                </div>
 
-            <div class="item">
-                <div class="icon"><img src="images/icon-element-text.png" alt="icon-element"></div>
-                <span>тексты</span>
+                <div class="item">
+                    <div class="icon"><img src="images/icon-element-search.png" alt="icon-element"></div>
+                    <span>поиск</span>
+                </div>
+
             </div>
 
         </div>
 
-        <div class="elements-item">
+        <div class="logos top-tab">
 
-            <div class="item">
-                <div class="icon"><img src="images/icon-element-image.png" alt="icon-element"></div>
-                <span>изображение</span>
+            <div class="top-tab-header">
+
+                <ul class="logos-control">
+                    <li class="active">текст</li>
+                    <li>текст + иконки</li>
+                    <li>картинка</li>
+                    <li>картинка + текст</li>
+                </ul>
+
+                <div class="top-tab-title">логотип</div>
+
             </div>
 
-            <div class="item">
-                <div class="icon"><img src="images/icon-element-showcase.png" alt="icon-element"></div>
-                <span>витрина</span>
-            </div>
+            <ul class="top-tab-sliders">
 
-            <div class="item">
-                <div class="icon"><img src="images/icon-element-icon.png" alt="icon-element"></div>
-                <span>иконки</span>
-            </div>
+                <li class="slider logos-slider-1">
 
-            <div class="item">
-                <div class="icon"><img src="images/icon-element-table.png" alt="icon-element"></div>
-                <span>таблицы</span>
-            </div>
+                    <div class="slide">
+                        <img src="images/logo-1.png" alt="logo">
+                        <span>1</span>
+                    </div>
 
-            <div class="item">
-                <div class="icon"><img src="images/icon-element-banner.png" alt="icon-element"></div>
-                <span>баннеры</span>
-            </div>
+                    <div class="slide">
+                        <img src="images/logo-2.png" alt="logo">
+                        <span>градиентный текст</span>
+                    </div>
 
-            <div class="item">
-                <div class="icon"><img src="images/icon-element-nav.png" alt="icon-element"></div>
-                <span>навигация</span>
-            </div>
+                    <div class="slide">
+                        <img src="images/logo-3.png" alt="logo">
+                        <span>полосатая тень</span>
+                    </div>
 
-            <div class="item">
-                <div class="icon"><img src="images/icon-element-sort.png" alt="icon-element"></div>
-                <span>сортировка</span>
-            </div>
+                    <div class="slide">
+                        <img src="images/logo-4.png" alt="logo">
+                        <span>тень в горошек</span>
+                    </div>
 
-            <div class="item">
-                <div class="icon"><img src="images/icon-element-slider.png" alt="icon-element"></div>
-                <span>слайдер</span>
-            </div>
+                    <div class="slide">
+                        <img src="images/logo-5.png" alt="logo">
+                        <span>5</span>
+                    </div>
 
-            <div class="item">
-                <div class="icon"><img src="images/icon-element-carousel.png" alt="icon-element"></div>
-                <span>карусель</span>
-            </div>
+                    <div class="slide">
+                        <img src="images/logo-6.png" alt="logo">
+                        <span>6</span>
+                    </div>
 
-            <div class="item">
-                <div class="icon"><img src="images/icon-element-accordion.png" alt="icon-element"></div>
-                <span>аккордеон</span>
-            </div>
+                    <div class="slide">
+                        <img src="images/logo-7.png" alt="logo">
+                        <span>7</span>
+                    </div>
 
-        </div>
+                    <div class="slide">
+                        <img src="images/logo-8.png" alt="logo">
+                        <span>тень в горошек</span>
+                        <span>линия разделитель</span>
+                    </div>
 
-        <div class="elements-item">
+                    <div class="slide">
+                        <img src="images/logo-9.png" alt="logo">
+                        <span>9</span>
+                    </div>
 
-            <div class="item">
-                <div class="icon"><img src="images/icon-element-tabs.png" alt="icon-element"></div>
-                <span>табы</span>
-            </div>
+                    <div class="slide">
+                        <img src="images/logo-2.png" alt="logo">
+                        <span>10</span>
+                    </div>
 
-            <div class="item">
-                <div class="icon"><img src="images/icon-element-timer.png" alt="icon-element"></div>
-                <span>таймер</span>
-            </div>
+                    <div class="slide">
+                        <img src="images/logo-1.png" alt="logo">
+                        <span>11</span>
+                    </div>
 
-            <div class="item">
-                <div class="icon"><img src="images/icon-element-gallery.png" alt="icon-element"></div>
-                <span>галерея</span>
-            </div>
+                    <div class="slide">
+                        <img src="images/logo-6.png" alt="logo">
+                        <span>12</span>
+                    </div>
 
-            <div class="item">
-                <div class="icon"><img src="images/icon-element-form.png" alt="icon-element"></div>
-                <span>формы</span>
-            </div>
+                </li>
 
-            <div class="item">
-                <div class="icon"><img src="images/icon-element-review.png" alt="icon-element"></div>
-                <span>отзывы</span>
-            </div>
+                <li class="slider logos-slider-2">
 
-            <div class="item">
-                <div class="icon"><img src="images/icon-element-modal.png" alt="icon-element"></div>
-                <span>модальные окна</span>
-            </div>
+                    <div class="slide">
+                        <img src="images/logo-1.png" alt="logo">
+                        <span>1</span>
+                    </div>
 
-            <div class="item">
-                <div class="icon"><img src="images/icon-element-search.png" alt="icon-element"></div>
-                <span>поиск</span>
-            </div>
+                    <div class="slide">
+                        <img src="images/logo-2.png" alt="logo">
+                        <span>градиентный текст</span>
+                    </div>
+
+                    <div class="slide">
+                        <img src="images/logo-3.png" alt="logo">
+                        <span>полосатая тень</span>
+                    </div>
+
+                    <div class="slide">
+                        <img src="images/logo-4.png" alt="logo">
+                        <span>тень в горошек</span>
+                    </div>
+
+                    <div class="slide">
+                        <img src="images/logo-5.png" alt="logo">
+                        <span>5</span>
+                    </div>
+
+                    <div class="slide">
+                        <img src="images/logo-6.png" alt="logo">
+                        <span>6</span>
+                    </div>
+
+                    <div class="slide">
+                        <img src="images/logo-7.png" alt="logo">
+                        <span>7</span>
+                    </div>
+
+                    <div class="slide">
+                        <img src="images/logo-8.png" alt="logo">
+                        <span>тень в горошек</span>
+                        <span>линия разделитель</span>
+                    </div>
+
+                    <div class="slide">
+                        <img src="images/logo-9.png" alt="logo">
+                        <span>9</span>
+                    </div>
+
+                    <div class="slide">
+                        <img src="images/logo-2.png" alt="logo">
+                        <span>10</span>
+                    </div>
+
+                    <div class="slide">
+                        <img src="images/logo-1.png" alt="logo">
+                        <span>11</span>
+                    </div>
+
+                    <div class="slide">
+                        <img src="images/logo-6.png" alt="logo">
+                        <span>12</span>
+                    </div>
+
+                </li>
+
+                <li class="slider logos-slider-3">
+
+                    <div class="slide">
+                        <img src="images/logo-1.png" alt="logo">
+                        <span>1</span>
+                    </div>
+
+                    <div class="slide">
+                        <img src="images/logo-2.png" alt="logo">
+                        <span>градиентный текст</span>
+                    </div>
+
+                    <div class="slide">
+                        <img src="images/logo-3.png" alt="logo">
+                        <span>полосатая тень</span>
+                    </div>
+
+                    <div class="slide">
+                        <img src="images/logo-4.png" alt="logo">
+                        <span>тень в горошек</span>
+                    </div>
+
+                    <div class="slide">
+                        <img src="images/logo-5.png" alt="logo">
+                        <span>5</span>
+                    </div>
+
+                    <div class="slide">
+                        <img src="images/logo-6.png" alt="logo">
+                        <span>6</span>
+                    </div>
+
+                    <div class="slide">
+                        <img src="images/logo-7.png" alt="logo">
+                        <span>7</span>
+                    </div>
+
+                    <div class="slide">
+                        <img src="images/logo-8.png" alt="logo">
+                        <span>тень в горошек</span>
+                        <span>линия разделитель</span>
+                    </div>
+
+                    <div class="slide">
+                        <img src="images/logo-9.png" alt="logo">
+                        <span>9</span>
+                    </div>
+
+                    <div class="slide">
+                        <img src="images/logo-2.png" alt="logo">
+                        <span>10</span>
+                    </div>
+
+                    <div class="slide">
+                        <img src="images/logo-1.png" alt="logo">
+                        <span>11</span>
+                    </div>
+
+                    <div class="slide">
+                        <img src="images/logo-6.png" alt="logo">
+                        <span>12</span>
+                    </div>
+
+                </li>
+
+                <li class="slider logos-slider-4">
+
+                    <div class="slide">
+                        <img src="images/logo-1.png" alt="logo">
+                        <span>1</span>
+                    </div>
+
+                    <div class="slide">
+                        <img src="images/logo-2.png" alt="logo">
+                        <span>градиентный текст</span>
+                    </div>
+
+                    <div class="slide">
+                        <img src="images/logo-3.png" alt="logo">
+                        <span>полосатая тень</span>
+                    </div>
+
+                    <div class="slide">
+                        <img src="images/logo-4.png" alt="logo">
+                        <span>тень в горошек</span>
+                    </div>
+
+                    <div class="slide">
+                        <img src="images/logo-5.png" alt="logo">
+                        <span>5</span>
+                    </div>
+
+                    <div class="slide">
+                        <img src="images/logo-6.png" alt="logo">
+                        <span>6</span>
+                    </div>
+
+                    <div class="slide">
+                        <img src="images/logo-7.png" alt="logo">
+                        <span>7</span>
+                    </div>
+
+                    <div class="slide">
+                        <img src="images/logo-8.png" alt="logo">
+                        <span>тень в горошек</span>
+                        <span>линия разделитель</span>
+                    </div>
+
+                    <div class="slide">
+                        <img src="images/logo-9.png" alt="logo">
+                        <span>9</span>
+                    </div>
+
+                    <div class="slide">
+                        <img src="images/logo-2.png" alt="logo">
+                        <span>10</span>
+                    </div>
+
+                    <div class="slide">
+                        <img src="images/logo-1.png" alt="logo">
+                        <span>11</span>
+                    </div>
+
+                    <div class="slide">
+                        <img src="images/logo-6.png" alt="logo">
+                        <span>12</span>
+                    </div>
+
+                </li>
+
+            </ul>
 
         </div>
 
     </div>
 
+    <div class="header-default">
+        Здесь может быть логотип, описание, или какая-либо справочная информация
+    </div>
+
+    <div class="content-panel">
+
+    </div>
+
 </div>
+
+
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
 <script src="https://unpkg.com/huebee@1/dist/huebee.pkgd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
 <script src="js/custom-scripts.js"></script>
 </body>
 </html>

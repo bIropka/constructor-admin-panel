@@ -5,14 +5,15 @@ $(document).ready(function() {
     *******************************************************************************************************************/
 
     setTimeout(function() {
-        $('.wrapper').css('opacity', '1');
+        $('.content-panel').css('opacity', '1');
+        $('.header-default').css('opacity', '1');
     }, 500);
 
     setTimeout(function() {
         $('.nav').css('left', '5px');
     }, 1000);
 
-    $('.wrapper').mCustomScrollbar();
+    $('.content-panel').mCustomScrollbar();
 
     $('.width-and-colors').mCustomScrollbar();
 
@@ -44,9 +45,19 @@ $(document).ready(function() {
 
     $('.nav li').click(function() {
 
+
+        $(this).siblings('.active').removeClass('active');
+
         if ($(this).hasClass('btn-show-result')) {
 
         } else if ($(this).hasClass('btn-add-element')) {
+
+            $('.left-tab:not(".elements")').removeClass('active');
+
+            setTimeout(function() {
+                $(this).toggleClass('active');
+                $('.elements').toggleClass('active');
+            }, 400);
 
         } else if ($(this).hasClass('btn-edit-text')) {
 
@@ -56,30 +67,21 @@ $(document).ready(function() {
 
         } else if ($(this).hasClass('btn-edit-background-width')) {
 
-            if($(this).hasClass('active') || !$('.btn-edit-info').hasClass('active')) {
+            $('.left-tab:not(".width-and-colors")').removeClass('active');
+
+            setTimeout(function() {
+                $(this).toggleClass('active');
                 $('.width-and-colors').toggleClass('active');
-            } else {
-                setTimeout(function() {
-                    $('.width-and-colors').toggleClass('active');
-                }, 500);
-            }
-            $('.btn-edit-info').removeClass('active');
-            $(this).toggleClass('active');
-            $('.general-settings').removeClass('active');
+            }, 400);
 
         } else if ($(this).hasClass('btn-edit-info')) {
 
-            if($(this).hasClass('active') || !$('.btn-edit-background-width').hasClass('active')) {
-                $('.general-settings').toggleClass('active');
-            } else {
-                setTimeout(function() {
-                    $('.general-settings').toggleClass('active');
-                }, 500);
-            }
-            $('.btn-edit-background-width').removeClass('active');
-            $(this).toggleClass('active');
-            $('.width-and-colors').removeClass('active');
+            $('.left-tab:not(".general-settings")').removeClass('active');
 
+            setTimeout(function() {
+                $(this).toggleClass('active');
+                $('.general-settings').toggleClass('active');
+            }, 400);
 
         } else if ($(this).hasClass('btn-save-template')) {
 
@@ -94,5 +96,57 @@ $(document).ready(function() {
 
     });
 
+    $('.elements-control li').click(function() {
+
+        $(this).siblings('.active').removeClass('active');
+        $(this).addClass('active');
+
+        $(this).parent().siblings('.elements-item.active').removeClass('active');
+        $(this).parent().siblings('.elements-item').eq($(this).index()).addClass('active');
+
+    });
+
+    $('.elements-item .item-logo').click(function() {
+
+        $(this).siblings('.active').removeClass('active');
+        $(this).toggleClass('active');
+
+        $('.top-tab:not(".logos")').removeClass('active');
+        setTimeout(function() {
+            $('.top-tab.logos').toggleClass('active');
+        }, 400);
+
+    });
+
+    $('.logos-control li').click(function() {
+
+        $(this).siblings('.active').removeClass('active');
+        $(this).addClass('active');
+        $('.logos-slider-1').css('margin-top', $(this).index() * (-190) + 'px');
+
+    });
+
+
+
+    /*******************************************************************************************************************
+     ************** sliders
+     ******************************************************************************************************************/
+
+    $('.slider.logos-slider-1').slick({
+        slidesToShow: 9,
+        draggable: false
+    });
+
+    $('.slider.logos-slider-2').slick({
+        slidesToShow: 9
+    });
+
+    $('.slider.logos-slider-3').slick({
+        slidesToShow: 9
+    });
+
+    $('.slider.logos-slider-4').slick({
+        slidesToShow: 9
+    });
 
 });
