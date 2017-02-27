@@ -544,6 +544,7 @@ button[data-balloon] {
     -ms-transition: .4s;
     -o-transition: .4s;
     transition: .4s;
+    z-index: 1;
 }
 
 .width-and-colors.active {
@@ -626,14 +627,13 @@ button[data-balloon] {
 
 .width-and-colors button[type="submit"] {
     display: block;
-    height: 24px;
+    padding: 4px 15px 6px;
     border: 2px solid #fff;
-    line-height: 20px;
+    line-height: 1;
     font-family: 'Calibri Light', sans-serif;
     font-size: 13px;
     color: #fff;
     text-transform: lowercase;
-    padding: 0 15px;
     background: #636060;
     -webkit-transition: .4s;
     -moz-transition: .4s;
@@ -651,7 +651,7 @@ button[data-balloon] {
 }
 
 .width-and-colors button[type="submit"]:active {
-    line-height: 24px;
+    border: 2px solid #b2d179;
 }
 
 /***********************************************************************************************************************
@@ -673,6 +673,7 @@ button[data-balloon] {
     -ms-transition: .4s;
     -o-transition: .4s;
     transition: .4s;
+    z-index: 1;
 }
 
 .general-settings.active {
@@ -755,14 +756,13 @@ button[data-balloon] {
 
 .general-settings button[type="submit"] {
     display: block;
-    height: 24px;
+    padding: 4px 15px 6px;
     border: 2px solid #fff;
-    line-height: 20px;
+    line-height: 1;
     font-family: 'Calibri Light', sans-serif;
     font-size: 13px;
     color: #fff;
     text-transform: lowercase;
-    padding: 0 15px;
     background: #636060;
     -webkit-transition: .4s;
     -moz-transition: .4s;
@@ -780,7 +780,7 @@ button[data-balloon] {
 }
 
 .general-settings button[type="submit"]:active {
-    line-height: 24px;
+    border: 2px solid #b2d179;
 }
 
 /***********************************************************************************************************************
@@ -873,6 +873,7 @@ button[data-balloon] {
 .elements-item .item span {
     display: block;
     width: 100%;
+    line-height: 1;
 }
 
 .elements-item .item:hover {
