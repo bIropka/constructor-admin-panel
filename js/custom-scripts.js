@@ -45,17 +45,16 @@ $(document).ready(function() {
 
     $('.nav li').click(function() {
 
-
-        $(this).siblings('.active').removeClass('active');
-
         if ($(this).hasClass('btn-show-result')) {
 
         } else if ($(this).hasClass('btn-add-element')) {
 
+            $('.btn-edit-info').removeClass('active');
+            $('.btn-edit-background-width').removeClass('active');
             $('.left-tab:not(".elements")').removeClass('active');
+            $(this).toggleClass('active');
 
             setTimeout(function() {
-                $(this).toggleClass('active');
                 $('.elements').toggleClass('active');
             }, 400);
 
@@ -65,21 +64,33 @@ $(document).ready(function() {
 
         } else if ($(this).hasClass('btn-choose-grid')) {
 
+            $(this).toggleClass('active');
+            $('.top-tab:not(".grids")').removeClass('active');
+            $('.elements-item .item').removeClass('active');
+
+            setTimeout(function() {
+                $('.top-tab.grids').toggleClass('active');
+            }, 400);
+
         } else if ($(this).hasClass('btn-edit-background-width')) {
 
+            $(this).toggleClass('active');
+            $('.btn-edit-info').removeClass('active');
+            $('.btn-add-element').removeClass('active');
             $('.left-tab:not(".width-and-colors")').removeClass('active');
 
             setTimeout(function() {
-                $(this).toggleClass('active');
                 $('.width-and-colors').toggleClass('active');
             }, 400);
 
         } else if ($(this).hasClass('btn-edit-info')) {
 
+            $(this).toggleClass('active');
+            $('.btn-edit-background-width').removeClass('active');
+            $('.btn-add-element').removeClass('active');
             $('.left-tab:not(".general-settings")').removeClass('active');
 
             setTimeout(function() {
-                $(this).toggleClass('active');
                 $('.general-settings').toggleClass('active');
             }, 400);
 
@@ -110,6 +121,7 @@ $(document).ready(function() {
 
         $(this).siblings('.active').removeClass('active');
         $(this).toggleClass('active');
+        $('.btn-choose-grid').removeClass('active');
 
         $('.top-tab:not(".logos")').removeClass('active');
         setTimeout(function() {
@@ -126,6 +138,14 @@ $(document).ready(function() {
 
     });
 
+    $('.grids-control li').click(function() {
+
+        $(this).siblings('.active').removeClass('active');
+        $(this).addClass('active');
+        $('.grids-slider-1').css('margin-top', $(this).index() * (-190) + 'px');
+
+    });
+
 
 
     /*******************************************************************************************************************
@@ -134,19 +154,106 @@ $(document).ready(function() {
 
     $('.slider.logos-slider-1').slick({
         slidesToShow: 9,
-        draggable: false
+        draggable: false,
+        responsive: [
+            {
+                breakpoint: 1920,
+                settings: {
+                    slidesToShow: 7
+                }
+            }
+        ]
     });
 
     $('.slider.logos-slider-2').slick({
-        slidesToShow: 9
+        slidesToShow: 9,
+        draggable: false,
+        responsive: [
+            {
+                breakpoint: 1920,
+                settings: {
+                    slidesToShow: 7
+                }
+            }
+        ]
     });
 
     $('.slider.logos-slider-3').slick({
-        slidesToShow: 9
+        slidesToShow: 9,
+        draggable: false,
+        responsive: [
+            {
+                breakpoint: 1920,
+                settings: {
+                    slidesToShow: 7
+                }
+            }
+        ]
     });
 
     $('.slider.logos-slider-4').slick({
-        slidesToShow: 9
+        slidesToShow: 9,
+        draggable: false,
+        responsive: [
+            {
+                breakpoint: 1920,
+                settings: {
+                    slidesToShow: 7
+                }
+            }
+        ]
+    });
+
+    $('.slider.grids-slider-1').slick({
+        slidesToShow: 9,
+        draggable: false,
+        responsive: [
+            {
+                breakpoint: 1920,
+                settings: {
+                    slidesToShow: 7
+                }
+            }
+        ]
+    });
+
+    $('.slider.grids-slider-2').slick({
+        slidesToShow: 9,
+        draggable: false,
+        responsive: [
+            {
+                breakpoint: 1920,
+                settings: {
+                    slidesToShow: 7
+                }
+            }
+        ]
+    });
+
+    $('.slider.grids-slider-3').slick({
+        slidesToShow: 9,
+        draggable: false,
+        responsive: [
+            {
+                breakpoint: 1920,
+                settings: {
+                    slidesToShow: 7
+                }
+            }
+        ]
+    });
+
+    $('.slider.grids-slider-4').slick({
+        slidesToShow: 9,
+        draggable: false,
+        responsive: [
+            {
+                breakpoint: 1920,
+                settings: {
+                    slidesToShow: 7
+                }
+            }
+        ]
     });
 
 });
